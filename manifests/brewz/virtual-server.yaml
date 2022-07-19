@@ -24,8 +24,8 @@ spec:
     - path: /
     matches:
       - conditions:
-          - cookie: "app_version"
-            value: "dark"
+        - cookie: "app_version"
+          value: "dark"
         action:
           pass: spa-dark
     - path: /api
