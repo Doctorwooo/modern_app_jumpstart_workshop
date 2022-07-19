@@ -18,16 +18,16 @@ spec:
       service: recommendations
       port: 8001
     - name: spa-dark
-     service: spa-dark
-     port: 80
+      service: spa-dark
+      port: 80
   routes:
     - path: /
-    matches:
-      - conditions:
-        - cookie: "app_version"
-          value: "dark"
-        action:
-          pass: spa-dark
+      matches:
+        - conditions:
+          - cookie: "app_version"
+            value: "dark"
+          action:
+            pass: spa-dark
     - path: /api
       policies:
         - name: rate-limit-policy
